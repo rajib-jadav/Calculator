@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #3a3a3a;
+    --text-color: #fff;
+    --bg: #141414;
+    --secondary-color: #0593d4;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: #f1efef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 290px;
+    background-color: var(--bg);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 12px 40px rgba(14, 13, 13, 0.3);
+}
+
+.display {
+  background: var(--primary-color);
+  padding: 12px;
+  text-align: right;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  height: 100px;
+}
+
+.expression {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #9e9e9e;
+  /* min-height: 18px; */
+}
+
+#result {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: right;
+  outline: none;
+}
+
+
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn{
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-size: 400;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.btn:hover{
+    background-color: #535353;
+}
+
+.btn.operator{
+    background-color: var(--secondary-color);
+}
+
+.btn.operator:hover{
+    background-color: #0088c7;
+}
+
+.btn.equals{
+    background-color: #535353;
+    grid-column: span 2;
+}
